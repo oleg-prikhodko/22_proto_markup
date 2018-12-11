@@ -5,62 +5,101 @@
 {% endblock %}
 
 {% block main %}
-    <div>
+    <div class="m-5">
         <span>Участиники в Новосибирске: </span>
-        <a href="">105 оптовых компаний</a>
-        <a href="">25 производителей</a>
+        <a href="" class="mx-3">105 оптовых компаний</a>
+        <a href="" class="mx-3">25 производителей</a>
     </div>
 
-    <div class="container bg-primary">
-        <h2 class="text-center">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
+    <h2 class="text-center">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
+
+    <div class="container bg-light mx-auto p-4 rounded mw-50">
         <form>
-            <span>Я ищу</span>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
-                <label class="custom-control-label">
-                    ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )
-                </label>
-            </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
-                <label class="custom-control-label">
-                    Кирпич / Газобетон / Брус
-                </label>
-            </div>
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input">
-                <label class="custom-control-label">
-                    Бетон / Раствор
-                </label>
-            </div>
-            <div class="dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    в Новосибирске и области
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">в Новосибирске и области</a>
-                    <a class="dropdown-item" href="#">в Новосибирске и области</a>
+            <div class="row">
+                <div class="col-2">
+                    <span>Я ищу</span>
+                </div>
+                <div class="col-10">
+                    <div class="form-group">
+            
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">
+                                ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )
+                            </label>
+                        </div>
+            
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">
+                                Кирпич / Газобетон / Брус
+                            </label>
+                        </div>
+            
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">
+                                Бетон / Раствор
+                            </label>
+                        </div>
+            
+                    </div>
+            
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                в Новосибирске и области
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">в Новосибирске и области</a>
+                                <a class="dropdown-item" href="#">в Новосибирске и области</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="">Описание *</label>
-                <input type="text" name="" id="">
-                <small class="form-text text-muted">Пример: нужно фбс 24.4.6 50 шт плиты пк 20 ПК 60-20-12 доставка в Новолуговое</small>
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="form-label">Описание *</label>
+                </div>
+                <div class="col-10">
+                    <textarea rows="2" class="form-control"></textarea>
+                    <small class="form-text text-muted">Пример: нужно фбс 24.4.6 50 шт плиты пк 20 ПК 60-20-12 доставка в Новолуговое</small>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Телефон</label>
-                <input type="text" name="" id="">
+
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="from-label">Телефон</label>
+                </div>
+
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <label class="col-form-label">Имя</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Имя</label>
-                <input type="text" name="" id="">
+
+            <div class="mx-auto text-center">
+                <button type="submit" class="btn btn-primary">ОПУБЛИКОВАТЬ ЗАЯВКУ</button>
             </div>
-            <button type="submit">ОПУБЛИКОВАТЬ ЗАЯВКУ</button>
+            
         </form>
     </div>
 
-    <div class="container">
+    <div class="container mx-auto my-4">
         <h1 class="text-center">Свежие заявки</h1>
     
         <div class="card">
