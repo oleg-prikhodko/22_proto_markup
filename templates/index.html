@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block main %}
+    <div>
+        <span>Участиники в Новосибирске: </span>
+        <a href="">105 оптовых компаний</a>
+        <a href="">25 производителей</a>
+    </div>
+
+    <div class="container bg-primary">
+        <h2 class="text-center">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
+        <form>
+            <span>Я ищу</span>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input">
+                <label class="custom-control-label">
+                    ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )
+                </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input">
+                <label class="custom-control-label">
+                    Кирпич / Газобетон / Брус
+                </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input">
+                <label class="custom-control-label">
+                    Бетон / Раствор
+                </label>
+            </div>
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    в Новосибирске и области
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">в Новосибирске и области</a>
+                    <a class="dropdown-item" href="#">в Новосибирске и области</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Описание *</label>
+                <input type="text" name="" id="">
+                <small class="form-text text-muted">Пример: нужно фбс 24.4.6 50 шт плиты пк 20 ПК 60-20-12 доставка в Новолуговое</small>
+            </div>
+            <div class="form-group">
+                <label for="">Телефон</label>
+                <input type="text" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Имя</label>
+                <input type="text" name="" id="">
+            </div>
+            <button type="submit">ОПУБЛИКОВАТЬ ЗАЯВКУ</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Свежие заявки</h1>
+    
+        <div class="card">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
