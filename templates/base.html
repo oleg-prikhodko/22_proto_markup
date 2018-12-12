@@ -1,3 +1,4 @@
+{% import 'macros.html' as macros %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,11 +52,11 @@
     </div>
 
     {% block footer %}
-      <div class="container-fluid bg-light mt-5 p-3">
-        <h1 class="text-center">Вы поставщик?</h1>
-        <div class="row">
+      <div class="container-fluid bg-light mt-5 px-5 py-3">
+        <h1 class="text-center mb-3">Вы поставщик?</h1>
+        <div class="row mw-75 mx-auto">
           
-          <div class="col-sm">
+          <div class="col-7">
             <p class="text-left">
               Для доступа к телефонам покупателей заполните форму
               или позвоните нам +7 999 888-77-66
@@ -68,25 +69,22 @@
             </p>
           </div>
 
-          <div class="col-sm">
+          <div class="col-1"></div>
+
+          <div class="col-4">
             <form action="" class="text-right">
-              <div class="form-group">
-                <label for="">Организация</label>
-                <input type="text" name="" id="">
+              {{ macros.input('Организация', True, '4', '8') }}
+              {{ macros.input('Телефон', True, '4', '8') }}
+              {{ macros.input('Email', True, '4', '8') }}
+              {{ macros.input('Имя', True, '4', '8') }}
+
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-8 text-left">
+                  {{ macros.button('Отправить информацию') }}
+                </div>
               </div>
-              <div class="form-group">
-                <label for="">Телефон</label>
-                <input type="text" name="" id="">
-              </div>
-              <div class="form-group">
-                <label for="">Email</label>
-                <input type="text" name="" id="">
-              </div>
-              <div class="form-group">
-                <label for="">Имя</label>
-                <input type="text" name="" id="">
-              </div>
-              <button type="submit" class="btn btn-primary">Отправить информацию</button>
+              
             </form>
           </div>
         </div>
