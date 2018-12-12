@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import 'macros.html' as macros %}
 
 {% block title %}
     Главная
@@ -21,41 +22,13 @@
                 </div>
                 <div class="col-10">
                     <div class="form-group">
-            
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input">
-                            <label class="form-check-label">
-                                ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )
-                            </label>
-                        </div>
-            
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input">
-                            <label class="form-check-label">
-                                Кирпич / Газобетон / Брус
-                            </label>
-                        </div>
-            
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input">
-                            <label class="form-check-label">
-                                Бетон / Раствор
-                            </label>
-                        </div>
-            
+                        {{ macros.check('ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )') }}
+                        {{ macros.check('Кирпич / Газобетон / Брус') }}
+                        {{ macros.check('Бетон / Раствор') }}
                     </div>
             
                     <div class="form-group">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                в Новосибирске и области
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">в Новосибирске и области</a>
-                                <a class="dropdown-item" href="#">в Новосибирске и области</a>
-                            </div>
-                        </div>
+                        {{ macros.dropdown('в Новосибирске и области') }}
                     </div>
                 </div>
             </div>
@@ -81,12 +54,7 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col">
-                            <div class="row">
-                                <label class="col-form-label">Имя</label>
-                                <div class="col">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
+                            {{ macros.input('Имя') }}
                         </div>
                     </div>
                 </div>
