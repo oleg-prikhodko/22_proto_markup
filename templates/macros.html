@@ -17,11 +17,23 @@
     </div>
 {%- endmacro %}
 
-{% macro input(label='') -%}
+{% macro input(label='', form_group=False, label_col='', input_col='') -%}
+    {% if form_group %}
+        <div class="form-group">
+    {% endif %}
     <div class="row">
-        <label class="col-form-label">{{ label }}</label>
-        <div class="col">
+        <div class="col{{ '-' + label_col if label_col else '' }}">
+            <label class="form-label">{{ label }}</label>
+        </div>
+        <div class="col{{ '-' + input_col if input_col else '' }}">
             <input type="text" class="form-control">
         </div>
     </div>
+    {% if form_group %}
+        </div>
+    {% endif %}
+{%- endmacro %}
+
+{% macro button(label='') -%}
+    <button type="submit" class="btn btn-primary">{{ label }}</button>
 {%- endmacro %}
