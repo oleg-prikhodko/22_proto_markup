@@ -54,7 +54,7 @@
                             <input type="text" class="form-control">
                         </div>
                         <div class="col">
-                            {{ macros.input('Имя') }}
+                            {{ macros.input('Имя', False, '2', '10') }}
                         </div>
                     </div>
                 </div>
@@ -63,33 +63,29 @@
             <div class="mx-auto text-center">
                 {{ macros.button('ОПУБЛИКОВАТЬ ЗАЯВКУ') }}
             </div>
-            
         </form>
     </div>
 
     <div class="container mx-auto my-4">
         <h1 class="text-center">Свежие заявки</h1>
     
-        <div class="card">
-            <div class="card-header">
-                Featured
+        {% for i in range(5) %}
+            <div class="card border-0">
+                <div class="card-body border-top border-dark">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <span class="text-left">вчера, в 21:30</span>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#">в закладки</a>
+                        </div>
+                    </div>
+                    <p class="card-text">60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</p>
+                    <p class="card-text">Алексей</p>
+                    {{ macros.button('Показать телефон') }}
+                    <span class="ml-3">12 просмотров</span>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}
