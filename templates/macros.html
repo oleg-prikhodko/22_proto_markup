@@ -5,14 +5,22 @@
     </div>
 {%- endmacro %}
 
-{% macro dropdown(placeholder='') -%}
-    <div class="dropdown">
-        <a class="nav-link dropdown-toggle" href="#">
-            {{ placeholder }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">{{ placeholder }}</a>
-            <a class="dropdown-item" href="#">{{ placeholder }}</a>
+{% macro dropdown(placeholder='', label='') -%}
+    <div class="input-group">
+        {% if label %}
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-transparent border-0" id="basic-addon1">{{ label }}</span>
+            </div>
+        {% endif %}
+        <div class="dropdown">
+            <button class="btn bg-transparent dropdown-toggle pl-0" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {{ placeholder }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">{{ placeholder }}</a>
+                <a class="dropdown-item" href="#">{{ placeholder }}</a>
+            </div>
         </div>
     </div>
 {%- endmacro %}

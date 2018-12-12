@@ -68,8 +68,17 @@
 
     <div class="container mx-auto my-4">
         <h1 class="text-center">Свежие заявки</h1>
+
+        <div class="row">
+            <div class="col">
+                {{ macros.dropdown('Все', 'раздел:') }}
+            </div>
+            <div class="col">
+                {{ macros.dropdown('Новосибирск и область', 'регион:') }}
+            </div>
+        </div>
     
-        {% for i in range(5) %}
+        {% for _ in range(3) %}
             <div class="card border-0">
                 <div class="card-body border-top border-dark">
                     <div class="row mb-4">
