@@ -45,3 +45,37 @@
 {% macro button(label='') -%}
     <button type="submit" class="btn btn-primary">{{ label }}</button>
 {%- endmacro %}
+
+{% macro orders_list(label, max_orders=4) %}
+    <div class="container mx-auto my-4">
+        <h1 class="text-center">{{ label }}</h1>
+
+        <div class="row justify-content-between">
+            <div class="col-auto">
+                {{ dropdown('Все', 'раздел:') }}
+            </div>
+            <div class="col-auto">
+                {{ dropdown('Новосибирск и область', 'регион:') }}
+            </div>
+        </div>
+
+        {% for _ in range(max_orders) %}
+            <div class="card border-0">
+                <div class="card-body border-top border-dark">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <span class="text-left">вчера, в 21:30</span>
+                        </div>
+                        <div class="col text-right">
+                            <a href="#">в закладки</a>
+                        </div>
+                    </div>
+                    <p class="card-text">60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</p>
+                    <p class="card-text">Алексей</p>
+                    {{ button('Показать телефон') }}
+                    <span class="ml-3">12 просмотров</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
