@@ -1,1 +1,10 @@
 {% extends "base.html" %}
+{% import 'macros.html' as macros %}
+
+{% block title %}
+    Заявки
+{% endblock %}
+
+{% block main %}
+    {{ macros.orders_list('Заявки', 8)}}
+{% endblock %}
