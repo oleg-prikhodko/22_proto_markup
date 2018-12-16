@@ -12,10 +12,9 @@
         <a href="" class="mx-3">25 производителей</a>
     </div>
 
-    <h2 class="text-center">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
-
-    <div class="container bg-light mx-auto p-4 rounded mw-50">
-        <form>
+    <div class="container mx-auto mw-75">
+        <h2 class="text-center py-3">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
+        <form class="bg-light rounded p-4">
             <div class="row">
                 <div class="col-2">
                     <span>Я ищу</span>
@@ -66,5 +65,5 @@
         </form>
     </div>
 
-    {{ macros.orders_list('Свежие заявки')}}
+    {{ macros.orders_list('Свежие заявки',5)}}
 {% endblock %}
