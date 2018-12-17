@@ -64,16 +64,22 @@
                 <div class="card-body border-top border-dark">
                     <div class="row mb-4">
                         <div class="col">
-                            <span class="text-left">вчера, в 21:30</span>
+                            <span class="text-left">вчера, в&nbsp;21:30</span>
                         </div>
                         <div class="col text-right">
-                            <a href="#">в закладки</a>
+                            <a href="#">в&nbsp;закладки</a>
                         </div>
                     </div>
-                    <p class="card-text">60 шт. ПК от 72-15 до ПК 21-15, Криводановка, с доставкой.</p>
+                    <p class="card-text">60&nbsp;шт. ПК&nbsp;от&nbsp;72&#8209;15 до&nbsp;ПК&nbsp;21&#8209;15, Криводановка, с&nbsp;доставкой.</p>
                     <p class="card-text">Алексей</p>
-                    {{ button('Показать телефон') }}
-                    <span class="ml-3">12 просмотров</span>
+                    <div class="row align-items-center">
+                        <div class="col-md-4 col-lg-3 col-12 mb-2">
+                            {{ button('Показать телефон') }}
+                        </div>
+                        <div class="col-md-3 col-12 mb-md-2">
+                            <span>12&nbsp;просмотров</span>
+                        </div>
+                    </div> 
                 </div>
             </div>
         {% endfor %}
