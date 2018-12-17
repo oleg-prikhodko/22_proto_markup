@@ -18,16 +18,16 @@
         </div>
     </div>
 
-    <div class="container mx-auto mw-75">
-        <h2 class="text-center py-3">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h2>
+    <div class="container mx-auto mw-auto px-0">
+        <h3 class="text-center py-3">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h3>
         <form class="bg-light rounded p-4">
             <div class="row">
-                <div class="col-2">
-                    <span>Я ищу</span>
+                <div class="col-md-2 col-12 pb-2">
+                    <span>Я&nbsp;ищу</span>
                 </div>
-                <div class="col-10">
+                <div class="col-md-10 col-12">
                     <div class="form-group">
-                        {{ macros.check('ЖБИ ( фундаментальные блоки ФБС, плиты перекрытий ПК, перемычки )') }}
+                        {{ macros.check('ЖБИ (&nbsp;фундаментальные блоки&nbsp;ФБС, плиты перекрытий&nbsp;ПК, перемычки&nbsp;)') }}
                         {{ macros.check('Кирпич / Газобетон / Брус') }}
                         {{ macros.check('Бетон / Раствор') }}
                     </div>
@@ -39,27 +39,35 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-2">
-                    <label class="form-label">Описание *</label>
+                <div class="col-md-2 col-12">
+                    <label class="form-label">Описание&nbsp;*</label>
                 </div>
-                <div class="col-10">
+                <div class="col-md-10 col-12">
                     <textarea rows="2" class="form-control"></textarea>
                     <small class="form-text text-muted">Пример: нужно фбс 24.4.6 50 шт плиты пк 20 ПК 60-20-12 доставка в Новолуговое</small>
                 </div>
             </div>
 
             <div class="form-group row">
-                <div class="col-2">
+                <div class="col-md-2 col-12">
                     <label class="from-label">Телефон</label>
                 </div>
 
-                <div class="col-10">
+                <div class="col-md-10 col-12">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-6 col-12 mb-2">
                             <input type="text" class="form-control">
                         </div>
-                        <div class="col">
-                            {{ macros.input('Имя', False, '2', '10') }}
+                        <div class="col-md-6 col-12">
+                            
+                            <div class="row">
+                                <div class="col-md-2 col-12">
+                                    <label class="form-label">Имя</label>
+                                </div>
+                                <div class="col-md-10 col-12">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
